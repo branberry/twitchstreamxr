@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import { ARCanvas } from '@react-three/xr';
-import { MeshProps } from '@react-three/fiber';
+import { Canvas, MeshProps } from '@react-three/fiber';
 
 const Torus: React.FC<MeshProps> = props => {
   const { position } = props;
@@ -16,11 +15,11 @@ const Torus: React.FC<MeshProps> = props => {
 
 function App() {
   return (
-    <ARCanvas>
+    <Canvas>
       <ambientLight />
       <pointLight position={[10, 10, 10]}/>
       <Torus/>
-    </ARCanvas>
+    </Canvas>
   );
 }
 
